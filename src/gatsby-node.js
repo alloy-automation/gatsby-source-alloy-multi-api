@@ -44,6 +44,15 @@ exports.sourceNodes = (
               })
               createNode(nodeData)
             })
+          } else if (data.data && Array.isArray(data.data)) {
+            data.data.forEach(result => {
+              const nodeData = processResult({
+                result,
+                endpoint,
+                prefix,
+              })
+              createNode(nodeData)
+            })
           } else {
             // Otherwise a single result has been returned
             const nodeData = processResult({
