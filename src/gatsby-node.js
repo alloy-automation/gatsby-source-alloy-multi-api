@@ -1,4 +1,6 @@
 const fetch = require('node-fetch')
+const { v4: uuidv4 } = require('uuid')
+
 exports.sourceNodes = (
   { actions, createNodeId, createContentDigest },
   configOptions
@@ -13,7 +15,9 @@ exports.sourceNodes = (
 
   // Helper function that processes a result to match Gatsby's node structure
   const processResult = ({ result, endpoint, prefix }) => {
-    const nodeId = createNodeId(`${endpoint}-${result.id}`)
+    const nodeId = createNodeId(
+      `${endpoint}-${result.id ? result.id : uuidv4()}`
+    )
     const nodeContent = JSON.stringify(result)
     const nodeData = Object.assign({}, result, {
       id: nodeId,
