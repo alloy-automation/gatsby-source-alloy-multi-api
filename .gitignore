@@ -1,0 +1,4 @@
+.vscode
+node_modules
+/gatsby-node.js
+.DS_Store
