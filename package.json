@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-source-multi-api",
-  "version": "1.0.5",
-  "description": "Source data from multiple Rest Api's & specific endpoints. See only the data you want, how you want it",
+  "name": "gatsby-source-alloy-multi-api",
+  "version": "1.0.0",
+  "description": "Copy of gatsby-source-multi-api",
   "main": "index.js",
   "scripts": {
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
